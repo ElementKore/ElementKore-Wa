@@ -61,7 +61,7 @@ export function Login({ onLogin }: LoginProps) {
     <div className="login-container">
       <div className="login-card">
         <div className="login-logo">
-          <img src="/openwa_logo.webp" alt="OpenWA" className="logo-icon" />
+          <img src="/elementkore-isotipo.svg" alt="ElementKore-Wa" className="logo-icon" />
           <span className="version-info">
             {t('login.version', {
               version: __APP_VERSION__,
@@ -122,7 +122,7 @@ export function Login({ onLogin }: LoginProps) {
       <footer className="login-footer">
         <span>{t('login.footer')}</span>
         <a
-          href="https://github.com/rmyndharis/OpenWA"
+          href="https://github.com/ElementKore/ElementKore-Wa"
           target="_blank"
           rel="noopener noreferrer"
           className="github-link"

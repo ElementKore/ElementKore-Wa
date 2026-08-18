@@ -1,10 +1,10 @@
-# OpenWA Dashboard
+# ElementKore-Wa Dashboard
 
 <p align="center">
-  <img src="../docs/logo/openwa_logo.webp" alt="OpenWA Logo" width="120"/>
+  <img src="../Branding/Svg/Isologo_ElementKore_Black_H.svg" alt="ElementKore-Wa Logo" width="120"/>
 </p>
 
-Modern web dashboard for managing OpenWA WhatsApp API Gateway sessions, webhooks, and infrastructure.
+Modern web dashboard for managing ElementKore-Wa WhatsApp API Gateway sessions, webhooks, and infrastructure.
 
 ## ✨ Features
 
@@ -96,4 +96,4 @@ VITE_WS_URL=http://localhost:2785
 
 ## 📄 License
 
-MIT License - Part of the [OpenWA](https://github.com/rmyndharis/OpenWA) project.
+MIT License - Part of the [ElementKore-Wa](https://github.com/ElementKore/ElementKore-Wa) project.

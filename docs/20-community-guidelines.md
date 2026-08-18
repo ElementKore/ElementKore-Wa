@@ -415,7 +415,7 @@ pull requests.
 Report privately through either channel:
 
 1. **GitHub Security Advisories** (preferred) — open a private report at
-   <https://github.com/rmyndharis/OpenWA/security/advisories/new>
+   <https://github.com/ElementKore/ElementKore-Wa/security/advisories/new>
 2. **Email** — yudhi@rmyndharis.com
 
 Include, where possible:

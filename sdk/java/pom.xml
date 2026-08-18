@@ -11,7 +11,7 @@
 
   <name>OpenWA Java SDK</name>
   <description>Official Java SDK for the OpenWA WhatsApp API Gateway</description>
-  <url>https://github.com/rmyndharis/OpenWA</url>
+  <url>https://github.com/ElementKore/ElementKore-Wa</url>
 
   <licenses>
     <license>
@@ -25,9 +25,9 @@
     </developer>
   </developers>
   <scm>
-    <connection>scm:git:https://github.com/rmyndharis/OpenWA.git</connection>
+    <connection>scm:git:https://github.com/ElementKore/ElementKore-Wa.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/rmyndharis/OpenWA.git</developerConnection>
-    <url>https://github.com/rmyndharis/OpenWA</url>
+    <url>https://github.com/ElementKore/ElementKore-Wa</url>
   </scm>
 
   <properties>

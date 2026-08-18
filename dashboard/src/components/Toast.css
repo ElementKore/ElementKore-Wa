@@ -35,35 +35,35 @@
 }
 
 .toast-success {
-  border-color: #22c55e;
+  border-color: var(--success);
 }
 
 .toast-success .toast-icon {
-  color: #22c55e;
+  color: var(--success);
 }
 
 .toast-error {
-  border-color: #ef4444;
+  border-color: var(--error);
 }
 
 .toast-error .toast-icon {
-  color: #ef4444;
+  color: var(--error);
 }
 
 .toast-warning {
-  border-color: #f59e0b;
+  border-color: var(--warning);
 }
 
 .toast-warning .toast-icon {
-  color: #f59e0b;
+  color: var(--warning);
 }
 
 .toast-info {
-  border-color: #3b82f6;
+  border-color: var(--info);
 }
 
 .toast-info .toast-icon {
-  color: #3b82f6;
+  color: var(--info);
 }
 
 .toast-icon {

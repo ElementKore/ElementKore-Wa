@@ -335,7 +335,7 @@ export class InfraConfigController {
       .sort()
       .map(key => `${key}=${merged[key]}`);
     const contents = [
-      '# OpenWA Configuration',
+      '# ElementKore-Wa Configuration',
       `# Generated at ${new Date().toISOString()}`,
       '# Managed via Dashboard > Infrastructure. Values in process env or project .env take precedence.',
       '',

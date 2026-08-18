@@ -85,7 +85,12 @@ export function Dashboard() {
     return (
       <div className="dashboard" style={{ padding: '2rem' }}>
         <div
-          style={{ background: 'rgba(239, 68, 68, 0.12)', padding: '1rem', borderRadius: '8px', color: 'var(--error)' }}
+          style={{
+            background: 'color-mix(in srgb, var(--error) 12%, transparent)',
+            padding: '1rem',
+            borderRadius: '8px',
+            color: 'var(--error)',
+          }}
         >
           {t('dashboard.errorPrefix', { message: error })}
         </div>

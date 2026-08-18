@@ -62,7 +62,7 @@
 .chats-page .session-selector:focus {
   border-color: var(--primary);
   background: var(--bg-white);
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 10%, transparent);
 }
 
 /* Chats / Channels / Status segmented control */
@@ -176,7 +176,7 @@
 }
 
 .chats-page .chat-item-card.active {
-  background: rgba(34, 197, 94, 0.08);
+  background: color-mix(in srgb, var(--primary) 8%, transparent);
 }
 
 .chats-page .chat-avatar {
@@ -203,7 +203,7 @@
 .chats-page .chat-item-card.active .chat-avatar {
   background: var(--bg-white);
   color: var(--primary);
-  border-color: rgba(34, 197, 94, 0.3);
+  border-color: color-mix(in srgb, var(--primary) 30%, transparent);
 }
 
 .chats-page .chat-item-info {
@@ -266,12 +266,12 @@
   min-width: 20px;
   padding: 0 6px;
   background: var(--primary);
-  color: white;
+  color: var(--on-primary, #ffffff);
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 1;
   border-radius: 999px;
-  box-shadow: 0 2px 4px rgba(34, 197, 94, 0.3);
+  box-shadow: 0 2px 4px color-mix(in srgb, var(--primary) 30%, transparent);
 }
 
 .chats-page .chat-kind-badge {
@@ -530,15 +530,15 @@
 }
 
 .chats-page .message-bubble.outgoing {
-  background: #d9fdd3; /* Soft WhatsApp Green */
-  color: #111b21;
+  background: color-mix(in srgb, var(--primary) 12%, var(--bg-white));
+  color: var(--text-primary);
   border-bottom-right-radius: 2px;
 }
 
 /* Dark theme outgoing chat bubble override */
 [data-theme='dark'] .chats-page .message-bubble.outgoing {
-  background: #005c4b; /* Dark WhatsApp Green */
-  color: #e9edef;
+  background: color-mix(in srgb, var(--primary) 35%, var(--bg-elevated));
+  color: var(--text-primary);
 }
 
 /* System-dark twin: the default 'system' theme removes data-theme entirely, so the explicit rule
@@ -546,8 +546,8 @@
    control (same pattern as Webhooks.css). */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) .chats-page .message-bubble.outgoing {
-    background: #005c4b;
-    color: #e9edef;
+    background: color-mix(in srgb, var(--primary) 35%, var(--bg-elevated));
+    color: var(--text-primary);
   }
 }
 
@@ -590,7 +590,7 @@
 }
 
 .chats-page .message-status-icon.read {
-  color: #53bdeb; /* WhatsApp blue checks */
+  color: var(--accent);
 }
 
 /* =============================================================================
@@ -625,7 +625,7 @@
 .chats-page .message-text-input:focus {
   border-color: var(--primary);
   background: var(--bg-white);
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 10%, transparent);
 }
 
 .chats-page .btn-send-message {
@@ -637,13 +637,13 @@
   background: var(--primary);
   border: none;
   border-radius: 50%;
-  color: white;
+  color: var(--on-primary, #ffffff);
   cursor: pointer;
   transition:
     background 0.2s,
     transform 0.1s;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--primary) 30%, transparent);
 }
 
 .chats-page .btn-send-message:hover:not(:disabled) {
@@ -655,7 +655,7 @@
   /* Keep the brand silhouette readable while clearly inactive — a bare gray-on-gray glyph
      reads as "no button here" rather than "send, disabled". */
   background: var(--primary);
-  color: #fff;
+  color: var(--on-primary, #ffffff);
   opacity: 0.55;
   cursor: not-allowed;
   box-shadow: none;
@@ -695,7 +695,7 @@
 }
 
 .chats-page .text-warn {
-  color: #ea580c;
+  color: var(--warning);
 }
 
 /* Real-time connection-lost banner */
@@ -706,8 +706,8 @@
   padding: 0.5rem 0.75rem;
   margin-bottom: 0.75rem;
   border-radius: 6px;
-  background: rgba(234, 88, 12, 0.1);
-  color: #ea580c;
+  background: color-mix(in srgb, var(--warning) 10%, transparent);
+  color: var(--warning);
   font-size: 0.875rem;
 }
 
@@ -738,7 +738,7 @@
 }
 
 .chats-page .btn-input-accessory.active {
-  background: rgba(34, 197, 94, 0.1);
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
   color: var(--primary);
 }
 
@@ -807,7 +807,7 @@
 }
 
 .chats-page .btn-remove-attachment:hover {
-  background: rgba(239, 68, 68, 0.12);
+  background: color-mix(in srgb, var(--error) 12%, transparent);
   color: var(--error);
 }
 
@@ -965,14 +965,14 @@
 }
 
 [data-theme='dark'] .chats-page .chat-document-media {
-  background: #202c33;
-  border-color: #2f3b43;
+  background: var(--bg-elevated);
+  border-color: var(--border);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) .chats-page .chat-document-media {
-    background: #202c33;
-    border-color: #2f3b43;
+    background: var(--bg-elevated);
+    border-color: var(--border);
   }
 }
 
@@ -1036,7 +1036,7 @@
 
 .chats-page .action-btn.delete-btn:hover {
   color: var(--error);
-  background: rgba(239, 68, 68, 0.12);
+  background: color-mix(in srgb, var(--error) 12%, transparent);
 }
 
 /* Reaction Quick Popover */
@@ -1137,7 +1137,7 @@
 
 .chats-page .message-bubble.outgoing .message-quote-box {
   background: rgba(0, 0, 0, 0.05);
-  border-left-color: #008069;
+  border-left-color: var(--primary);
 }
 
 [data-theme='dark'] .chats-page .message-quote-box {
@@ -1224,16 +1224,16 @@
 [data-theme='dark'] .chats-page .message-actions-menu,
 [data-theme='dark'] .chats-page .reaction-quick-popover,
 [data-theme='dark'] .chats-page .message-reactions-badge {
-  background: #202c33;
-  border-color: #2f3b43;
+  background: var(--bg-elevated);
+  border-color: var(--border);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) .chats-page .message-actions-menu,
   :root:not([data-theme='light']) .chats-page .reaction-quick-popover,
   :root:not([data-theme='light']) .chats-page .message-reactions-badge {
-    background: #202c33;
-    border-color: #2f3b43;
+    background: var(--bg-elevated);
+    border-color: var(--border);
   }
 }
 
@@ -1404,7 +1404,7 @@
 .chats-page .status-compose-modal select:focus {
   border-color: var(--primary);
   background: var(--bg-white);
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 10%, transparent);
 }
 
 .chats-page .status-compose-modal textarea {

@@ -15,7 +15,7 @@
   display: block;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--text-secondary, #64748b);
+  color: var(--text-secondary, #475569);
 }
 
 .filter-builder-hint {
@@ -174,7 +174,7 @@
 .enum-tag.selected {
   background: var(--primary);
   border-color: var(--primary);
-  color: #fff;
+  color: var(--on-primary, #ffffff);
 }
 
 /* Chips input with autocomplete */
@@ -199,8 +199,8 @@
   align-items: center;
   gap: 0.25rem;
   padding: 0.125rem 0.375rem;
-  background: rgba(37, 211, 102, 0.15);
-  border: 1px solid rgba(37, 211, 102, 0.25);
+  background: color-mix(in srgb, var(--primary) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary) 25%, transparent);
   color: var(--primary);
   border-radius: 6px;
   font-size: 0.75rem;

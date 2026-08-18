@@ -434,7 +434,7 @@ export function Sessions() {
       {error && (
         <div
           style={{
-            background: 'rgba(239, 68, 68, 0.12)',
+            background: 'color-mix(in srgb, var(--error) 12%, transparent)',
             padding: '1rem',
             borderRadius: '8px',
             color: 'var(--error)',

@@ -27,8 +27,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/rmyndharis/OpenWA"
-Repository = "https://github.com/rmyndharis/OpenWA"
+Homepage = "https://github.com/ElementKore/ElementKore-Wa"
+Repository = "https://github.com/ElementKore/ElementKore-Wa"
 
 [tool.setuptools.packages.find]
 include = ["openwa*"]

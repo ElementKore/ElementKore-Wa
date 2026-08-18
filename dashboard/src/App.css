@@ -1,20 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 :root {
-  --primary: #25d366;
-  --primary-hover: #1da851;
-  --primary-soft: rgba(37, 211, 102, 0.12);
+  --primary: #0f4edb;
+  --primary-hover: #0a2f8f;
+  --primary-soft: color-mix(in srgb, var(--primary) 12%, transparent);
+  --accent: #15c8f4;
+  --blue-soft: #dcebff;
   --bg-light: #f8fafc;
   --bg-white: #ffffff;
   --bg-card: #ffffff;
+  --bg-elevated: #ffffff;
   --text-primary: #0f172a; /* Slate 900 */
   --text-secondary: #475569; /* Slate 600 */
-  --text-muted: #64748b; /* Slate 500; 4.76:1 on white (AA) */
-  --border: #e2e8f0; /* Slate 200 */
-  --error: #ef4444;
+  --text-muted: #475569;
+  --border: #d9e2ec;
+  --error: #ff5c5c;
   --success: #22c55e;
-  --warning: #f59e0b;
-  --info: #2563eb; /* Blue 600 — info/permission/log badges + qr-ready pill */
+  --warning: #fbbf24;
+  --info: #38bdf8;
+  --on-primary: #ffffff;
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -27,14 +31,19 @@
      app theme, not just the OS preference — otherwise toggling dark while the OS is light left
      native dropdowns rendered in the light scheme (#249). */
   color-scheme: dark;
-  --bg-light: #0f172a; /* Slate 900 */
-  --bg-white: #1e293b; /* Slate 800 */
-  --bg-card: #1e293b;
-  --text-primary: #f1f5f9; /* Slate 100 */
-  --text-secondary: #cbd5e1; /* Slate 300 */
-  --text-muted: #94a3b8; /* Slate 400; 5.71:1 on Slate 800 (AA) */
-  --border: #334155; /* Slate 700 */
-  --info: #60a5fa; /* Blue 400 — lighter so it reads over the dark translucent-blue tints */
+  --primary: #1d5bff;
+  --primary-hover: #6ea8ff;
+  --accent: #20c8f5;
+  --blue-soft: #6ea8ff;
+  --bg-light: #111315;
+  --bg-white: #171a1f;
+  --bg-card: #171a1f;
+  --bg-elevated: #22272f;
+  --text-primary: #f5f7fa;
+  --text-secondary: #aeb7c2;
+  --text-muted: #aeb7c2;
+  --border: #343a45;
+  --info: #38bdf8;
   --primary-soft: color-mix(in srgb, var(--primary) 18%, transparent);
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
@@ -44,6 +53,23 @@
 /* Explicit light toggle: keep native controls light even if the OS prefers dark. */
 [data-theme='light'] {
   color-scheme: light;
+  --primary: #0f4edb;
+  --primary-hover: #0a2f8f;
+  --accent: #15c8f4;
+  --blue-soft: #dcebff;
+  --bg-light: #f8fafc;
+  --bg-white: #ffffff;
+  --bg-card: #ffffff;
+  --bg-elevated: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #475569;
+  --border: #d9e2ec;
+  --error: #ff5c5c;
+  --success: #22c55e;
+  --warning: #fbbf24;
+  --info: #38bdf8;
+  --on-primary: #ffffff;
 }
 
 /* System preference dark mode */
@@ -53,14 +79,19 @@
        The Login screen never sets data-theme, so it relies solely on this block — without an
        explicit color-scheme the popup rendered light, leaving the light option text illegible (#249). */
     color-scheme: dark;
-    --bg-light: #0f172a;
-    --bg-white: #1e293b;
-    --bg-card: #1e293b;
-    --text-primary: #f1f5f9;
-    --text-secondary: #cbd5e1;
-    --text-muted: #94a3b8;
-    --border: #334155;
-    --info: #60a5fa;
+    --primary: #1d5bff;
+    --primary-hover: #6ea8ff;
+    --accent: #20c8f5;
+    --blue-soft: #6ea8ff;
+    --bg-light: #111315;
+    --bg-white: #171a1f;
+    --bg-card: #171a1f;
+    --bg-elevated: #22272f;
+    --text-primary: #f5f7fa;
+    --text-secondary: #aeb7c2;
+    --text-muted: #aeb7c2;
+    --border: #343a45;
+    --info: #38bdf8;
     --primary-soft: color-mix(in srgb, var(--primary) 18%, transparent);
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
@@ -114,8 +145,8 @@ a:hover {
 
 /* Error banner — shared across pages (moved out of Plugins.css so any page can use it). */
 .error-banner {
-  background: rgba(239, 68, 68, 0.1);
-  border: 1px solid rgba(239, 68, 68, 0.3);
+  background: color-mix(in srgb, var(--error) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--error) 30%, transparent);
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1.5rem;

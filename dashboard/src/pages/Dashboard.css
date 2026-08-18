@@ -20,7 +20,7 @@
 }
 
 .dashboard .status-badge.connected {
-  background: rgba(37, 211, 102, 0.1);
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
   color: var(--primary);
 }
 
@@ -222,13 +222,13 @@
 }
 
 .dashboard .status-pill.ready {
-  background: rgba(37, 211, 102, 0.1);
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
   color: var(--primary);
 }
 
 .dashboard .status-pill.connecting,
 .dashboard .status-pill.authenticating {
-  background: rgba(245, 158, 11, 0.15);
+  background: color-mix(in srgb, var(--warning) 15%, transparent);
   color: var(--warning);
 }
 
@@ -238,7 +238,7 @@
 }
 
 .dashboard .status-pill.failed {
-  background: rgba(239, 68, 68, 0.15);
+  background: color-mix(in srgb, var(--error) 15%, transparent);
   color: var(--error);
 }
 
@@ -272,12 +272,12 @@
 
 .dashboard .btn-sm.danger {
   color: var(--error);
-  border-color: rgba(239, 68, 68, 0.3);
-  background: rgba(239, 68, 68, 0.12);
+  border-color: color-mix(in srgb, var(--error) 30%, transparent);
+  background: color-mix(in srgb, var(--error) 12%, transparent);
 }
 
 .dashboard .btn-sm.danger:hover {
-  background: rgba(239, 68, 68, 0.18);
+  background: color-mix(in srgb, var(--error) 18%, transparent);
 }
 
 @media (max-width: 1200px) {

@@ -1,6 +1,6 @@
 # rmyndharis/openwa
 
-Official PHP SDK for the [OpenWA](https://github.com/rmyndharis/OpenWA) WhatsApp API Gateway.
+Official PHP SDK for the [ElementKore-Wa](https://github.com/ElementKore/ElementKore-Wa) WhatsApp API Gateway.
 
 A synchronous client built on [Guzzle](https://docs.guzzlephp.org/), PSR-4 autoloaded.
 
@@ -29,7 +29,7 @@ $client->sessions->start('my-session');
 
 $result = $client->messages->sendText('my-session', [
     'chatId' => '628123456789@c.us',
-    'text'   => 'Hello from the OpenWA PHP SDK!',
+    'text'   => 'Hello from the ElementKore-Wa PHP SDK!',
 ]);
 echo $result['messageId'];
 ```

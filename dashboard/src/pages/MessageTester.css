@@ -148,12 +148,12 @@
 }
 
 .message-tester .response-status.success {
-  background: rgba(37, 211, 102, 0.1);
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
   color: var(--primary);
 }
 
 .message-tester .response-status.error {
-  background: rgba(239, 68, 68, 0.12);
+  background: color-mix(in srgb, var(--error) 12%, transparent);
   color: var(--error);
 }
 
@@ -188,7 +188,7 @@
 }
 
 .message-tester .response-json {
-  background: #1e293b;
+  background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1rem;
@@ -197,7 +197,7 @@
 
 .message-tester .response-json pre {
   margin: 0;
-  color: #e2e8f0;
+  color: var(--text-secondary);
   font-size: 0.8125rem;
   font-family: 'JetBrains Mono', monospace;
   white-space: pre-wrap;
@@ -404,22 +404,22 @@
 
 .message-tester .batch-badge.pending,
 .message-tester .batch-badge.processing {
-  background: rgba(59, 130, 246, 0.12);
-  color: #3b82f6;
+  background: color-mix(in srgb, var(--info) 12%, transparent);
+  color: var(--info);
 }
 
 .message-tester .batch-badge.completed {
-  background: rgba(37, 211, 102, 0.12);
+  background: color-mix(in srgb, var(--primary) 12%, transparent);
   color: var(--primary);
 }
 
 .message-tester .batch-badge.failed {
-  background: rgba(239, 68, 68, 0.12);
+  background: color-mix(in srgb, var(--error) 12%, transparent);
   color: var(--error);
 }
 
 .message-tester .batch-badge.cancelled {
-  background: rgba(100, 116, 139, 0.12);
+  background: color-mix(in srgb, var(--text-secondary) 12%, transparent);
   color: var(--text-secondary);
 }
 
@@ -454,7 +454,7 @@
 }
 
 .message-tester .batch-cancel-btn:hover:not(:disabled) {
-  background: rgba(239, 68, 68, 0.08);
+  background: color-mix(in srgb, var(--error) 8%, transparent);
 }
 
 .message-tester .batch-cancel-btn:disabled {

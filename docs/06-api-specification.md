@@ -1162,7 +1162,7 @@ Get persisted message history for a session from the local DB (paginated, filter
       "chatId": "628123456789@c.us",
       "from": "628123456789@c.us",
       "to": "628987654321@c.us",
-      "body": "Hello from OpenWA!",
+      "body": "Hello from ElementKore-Wa!",
       "type": "text",
       "direction": "outgoing",
       "timestamp": 1719312000,
@@ -1504,7 +1504,7 @@ Send a plain text message.
 | quotedMessageId   | string   | No       | non-empty                      | Quote an earlier message, making this a reply. See [Quoted sends](#quoted-sends) below       |
 
 ```json
-{ "chatId": "628123456789@c.us", "text": "Hello from OpenWA!" }
+{ "chatId": "628123456789@c.us", "text": "Hello from ElementKore-Wa!" }
 ```
 
 ```json
@@ -3176,7 +3176,7 @@ Bare `Template[]` array (no pagination, no envelope). Ordered by `createdAt` DES
     "sessionId": "9b1c0e2a-3d4f-5a6b-7c8d-9e0f1a2b3c4d",
     "name": "order-confirmation",
     "body": "Hi {{customer}}, your order {{orderId}} has shipped.",
-    "header": "OpenWA Store",
+    "header": "ElementKore-Wa Store",
     "footer": "Reply STOP to unsubscribe.",
     "createdAt": "2026-06-25T10:15:00.000Z",
     "updatedAt": "2026-06-25T10:15:00.000Z"
@@ -3209,7 +3209,7 @@ Raw `Template` entity (no envelope).
   "sessionId": "9b1c0e2a-3d4f-5a6b-7c8d-9e0f1a2b3c4d",
   "name": "order-confirmation",
   "body": "Hi {{customer}}, your order {{orderId}} has shipped.",
-  "header": "OpenWA Store",
+  "header": "ElementKore-Wa Store",
   "footer": "Reply STOP to unsubscribe.",
   "createdAt": "2026-06-25T10:15:00.000Z",
   "updatedAt": "2026-06-25T10:15:00.000Z"
@@ -3243,7 +3243,7 @@ Create a message template for the session (with `{{variable}}` placeholders in t
 {
   "name": "order-confirmation",
   "body": "Hi {{customer}}, your order {{orderId}} has shipped.",
-  "header": "OpenWA Store",
+  "header": "ElementKore-Wa Store",
   "footer": "Reply STOP to unsubscribe."
 }
 ```
@@ -3258,7 +3258,7 @@ Returns the saved `Template` entity raw (no envelope). The lazy `session` relati
   "sessionId": "9b1c0e2a-3d4f-5a6b-7c8d-9e0f1a2b3c4d",
   "name": "order-confirmation",
   "body": "Hi {{customer}}, your order {{orderId}} has shipped.",
-  "header": "OpenWA Store",
+  "header": "ElementKore-Wa Store",
   "footer": "Reply STOP to unsubscribe.",
   "createdAt": "2026-06-25T10:15:00.000Z",
   "updatedAt": "2026-06-25T10:15:00.000Z"
@@ -3306,7 +3306,7 @@ Loads via lookup (`404` if missing), patches the provided fields, saves, and ret
   "sessionId": "9b1c0e2a-3d4f-5a6b-7c8d-9e0f1a2b3c4d",
   "name": "order-confirmation",
   "body": "Hi {{customer}}, your order {{orderId}} is out for delivery.",
-  "header": "OpenWA Store",
+  "header": "ElementKore-Wa Store",
   "footer": "Thanks for shopping with us.",
   "createdAt": "2026-06-25T10:15:00.000Z",
   "updatedAt": "2026-06-25T11:02:00.000Z"
@@ -3798,7 +3798,7 @@ List all labels defined for the session (WhatsApp Business accounts only).
 ```json
 [
   { "id": "1", "name": "New customer", "hexColor": "#FF9485" },
-  { "id": "5", "name": "Paid", "hexColor": "#25D366" }
+  { "id": "5", "name": "Paid", "hexColor": "#0F4EDB" }
 ]
 ```
 
@@ -3822,7 +3822,7 @@ Get a single label by its ID.
 **Response** `200`
 
 ```json
-{ "id": "5", "name": "Paid", "hexColor": "#25D366" }
+{ "id": "5", "name": "Paid", "hexColor": "#0F4EDB" }
 ```
 
 The engine resolves `Label | null`; a `null` is mapped to `404` in the service, so a `200` always carries a label.
@@ -3903,7 +3903,7 @@ List the labels currently assigned to a specific chat.
 **Response** `200`
 
 ```json
-[{ "id": "5", "name": "Paid", "hexColor": "#25D366" }]
+[{ "id": "5", "name": "Paid", "hexColor": "#0F4EDB" }]
 ```
 
 Bare array — raw return of `engine.getChatLabels(chatId)`.
@@ -3990,7 +3990,7 @@ Get all contact status updates (stories) visible to the session, read from the s
       "type": "image",
       "caption": "On the road",
       "mediaUrl": "/api/sessions/my-session/status/false_6281234567890@c.us_3A1F.../media",
-      "backgroundColor": "#25D366",
+      "backgroundColor": "#0F4EDB",
       "font": 2,
       "timestamp": "2026-06-25T08:30:00.000Z",
       "expiresAt": "2026-06-26T08:30:00.000Z"
@@ -4026,7 +4026,7 @@ Get status updates posted by a specific contact, read from the store (24h TTL, b
       "contact": { "id": "6281234567890@c.us", "pushName": "Alice" },
       "type": "text",
       "caption": "Hello!",
-      "backgroundColor": "#25D366",
+      "backgroundColor": "#0F4EDB",
       "font": 0,
       "timestamp": "2026-06-25T08:30:00.000Z",
       "expiresAt": "2026-06-26T08:30:00.000Z"
@@ -4076,11 +4076,11 @@ Post a text status (story) to the session's status feed. The recipients allow-li
 | --------------- | -------- | -------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | text            | string   | yes      | `@MaxLength(4096)`                                                   | Status text body                                                                                                                                                                                                                                                                                                          |
 | recipients      | string[] | no       | 0–256 items, each matching `^\d+@(c\.us\|lid)$`                      | JIDs of the contacts permitted to view the status. **Honored on Baileys only** (passed as `statusJidList`), where it is required in practice — Baileys posts to exactly this allow-list, so omitting it reaches nobody. whatsapp-web.js ignores it and broadcasts to the account's status-privacy audience; omit it there |
-| backgroundColor | string   | no       | 6-digit hex color matching `^#[0-9A-Fa-f]{6}$`                       | e.g. `#25D366`; bad value → `backgroundColor must be a hex color (e.g., #25D366)`                                                                                                                                                                                                                                         |
+| backgroundColor | string   | no       | 6-digit hex color matching `^#[0-9A-Fa-f]{6}$`                       | e.g. `#0F4EDB`; bad value → `backgroundColor must be a hex color (e.g., #0F4EDB)`                                                                                                                                                                                                                                         |
 | font            | integer  | no       | `@IsIn([0, 1, 2, 6, 7, 8, 9, 10])` — `3`–`5` are rejected with `400` | WhatsApp status font index: `0` (default), `1`, `2`, `6` (bold), `7`, `8`, `9`, `10`. whatsapp-web.js honors only `0`–`7` and clamps anything above back to the default                                                                                                                                                   |
 
 ```json
-{ "text": "Hello from OpenWA!", "recipients": ["6281234567890@c.us"], "backgroundColor": "#25D366", "font": 2 }
+{ "text": "Hello from ElementKore-Wa!", "recipients": ["6281234567890@c.us"], "backgroundColor": "#0F4EDB", "font": 2 }
 ```
 
 **Response** `201`
@@ -4547,7 +4547,7 @@ Send a synthetic test payload to the webhook URL and report the result. No reque
 { "success": true, "statusCode": 200 }
 ```
 
-On a reachable endpoint the response is `{ success: <response.ok>, statusCode: <response.status> }` — so a non-2xx target returns `200` HTTP with `success: false` and the target's `statusCode`. On an SSRF/timeout/network error the response is `{ "success": false, "error": "<message>" }`. The endpoint never throws on delivery failure; the failure is reflected in the body, not the HTTP status. The test POST sends `{ "event": "test", ... }` with headers `Content-Type`, `User-Agent: OpenWA-Webhook/1.0.0`, `X-OpenWA-Event: test`, `X-OpenWA-Idempotency-Key`, `X-OpenWA-Delivery-Id`, `X-OpenWA-Retry-Count: 0`, and `X-OpenWA-Signature` when a secret is set. Timeout defaults to 10000 ms (`webhook.timeout` config).
+On a reachable endpoint the response is `{ success: <response.ok>, statusCode: <response.status> }` — so a non-2xx target returns `200` HTTP with `success: false` and the target's `statusCode`. On an SSRF/timeout/network error the response is `{ "success": false, "error": "<message>" }`. The endpoint never throws on delivery failure; the failure is reflected in the body, not the HTTP status. The test POST sends `{ "event": "test", ... }` with headers `Content-Type`, `User-Agent: ElementKore-Wa-Webhook/1.0.0`, `X-OpenWA-Event: test`, `X-OpenWA-Idempotency-Key`, `X-OpenWA-Delivery-Id`, `X-OpenWA-Retry-Count: 0`, and `X-OpenWA-Signature` when a secret is set. Timeout defaults to 10000 ms (`webhook.timeout` config).
 
 **Errors:** `401` missing/invalid API key · `403` insufficient role · `404` webhook not found in this session
 

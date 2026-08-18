@@ -102,7 +102,7 @@
 }
 
 .logs-page .logs-table .table-row:not(.header):hover {
-  background: rgba(37, 211, 102, 0.05);
+  background: color-mix(in srgb, var(--primary) 5%, transparent);
 }
 
 .logs-page .timestamp {
@@ -155,17 +155,17 @@
 }
 
 .logs-page .severity-badge.info {
-  background: rgba(59, 130, 246, 0.12);
+  background: color-mix(in srgb, var(--info) 12%, transparent);
   color: var(--info);
 }
 
 .logs-page .severity-badge.warn {
-  background: rgba(245, 158, 11, 0.15);
+  background: color-mix(in srgb, var(--warning) 15%, transparent);
   color: var(--warning);
 }
 
 .logs-page .severity-badge.error {
-  background: rgba(239, 68, 68, 0.12);
+  background: color-mix(in srgb, var(--error) 12%, transparent);
   color: var(--error);
 }
 

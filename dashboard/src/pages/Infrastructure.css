@@ -61,17 +61,17 @@
 }
 
 .infrastructure-page .status-indicator.connected {
-  background: rgba(37, 211, 102, 0.1);
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
   color: var(--primary);
 }
 
 .infrastructure-page .status-indicator.disconnected {
-  background: rgba(239, 68, 68, 0.12);
+  background: color-mix(in srgb, var(--error) 12%, transparent);
   color: var(--error);
 }
 
 .infrastructure-page .status-indicator.sqlite {
-  background: rgba(59, 130, 246, 0.12);
+  background: color-mix(in srgb, var(--info) 12%, transparent);
   color: var(--info);
 }
 
@@ -100,7 +100,7 @@
 
 .infrastructure-page .radio-option.selected {
   border-color: var(--primary);
-  background: rgba(37, 211, 102, 0.05);
+  background: color-mix(in srgb, var(--primary) 5%, transparent);
 }
 
 .infrastructure-page .radio-option input {
@@ -525,8 +525,8 @@
   margin: 0 0 1.5rem;
   padding: 0.85rem 1rem;
   border-radius: 8px;
-  background: rgba(245, 158, 11, 0.1);
-  border: 1px solid rgba(245, 158, 11, 0.35);
+  background: color-mix(in srgb, var(--warning) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--warning) 35%, transparent);
   color: var(--text-primary);
 }
 .infrastructure-page .migration-warning svg {
@@ -581,7 +581,7 @@
 }
 
 .infrastructure-page .status-error-icon {
-  color: var(--warning, #d97706);
+  color: var(--warning, #fbbf24);
   margin-bottom: 1rem;
 }
 

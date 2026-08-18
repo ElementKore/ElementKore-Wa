@@ -120,11 +120,11 @@ export class SendVoiceStatusDto {
     description:
       'Background colour as `#RRGGBB`, which WhatsApp renders behind the voice-note bubble. ' +
       'Baileys only — whatsapp-web.js exposes no styling for a status and ignores it.',
-    example: '#25D366',
+    example: '#0F4EDB',
   })
   @IsOptional()
   @IsString()
-  @Matches(/^#[0-9A-Fa-f]{6}$/, { message: 'backgroundColor must be a hex color (e.g., #25D366)' })
+  @Matches(/^#[0-9A-Fa-f]{6}$/, { message: 'backgroundColor must be a hex color (e.g., #0F4EDB)' })
   backgroundColor?: string;
 
   @ApiPropertyOptional({

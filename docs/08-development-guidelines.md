@@ -625,8 +625,8 @@ Add a new one only when the condition is engine-agnostic and recurs; a one-off s
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/rmyndharis/OpenWA.git
-cd OpenWA
+git clone https://github.com/ElementKore/ElementKore-Wa.git
+cd ElementKore-Wa
 
 # 2. Install the locked dependencies (also installs dashboard dependencies)
 npm ci

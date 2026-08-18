@@ -245,7 +245,7 @@ export class WebhookService implements OnModuleInit, OnModuleDestroy {
       idempotencyKey: generateIdempotencyKey('test', { webhookId: webhook.id }),
       deliveryId: generateDeliveryId(),
       data: {
-        message: 'This is a test webhook from OpenWA',
+        message: 'This is a test webhook from ElementKore-Wa',
         webhookId: webhook.id,
         url: webhook.url,
       },
@@ -256,7 +256,7 @@ export class WebhookService implements OnModuleInit, OnModuleDestroy {
       // Custom headers FIRST so the system headers below always win.
       ...this.delivery.sanitizeCustomHeaders(webhook.headers),
       'Content-Type': 'application/json',
-      'User-Agent': 'OpenWA-Webhook/1.0.0',
+      'User-Agent': 'ElementKore-Wa-Webhook/1.0.0',
       'X-OpenWA-Event': 'test',
       'X-OpenWA-Idempotency-Key': testPayload.idempotencyKey,
       'X-OpenWA-Delivery-Id': testPayload.deliveryId,

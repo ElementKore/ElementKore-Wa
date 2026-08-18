@@ -395,7 +395,7 @@ Send a plain text message.
 curl -X POST "$BASE/api/sessions/$SESSION_ID/messages/send-text" \
   -H "X-API-Key: $API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{ "chatId": "628123456789@c.us", "text": "Hello from OpenWA!" }'
+  -d '{ "chatId": "628123456789@c.us", "text": "Hello from ElementKore-Wa!" }'
 ```
 
 #### POST /api/sessions/:sessionId/messages/send-template
@@ -877,7 +877,7 @@ curl -X POST "$BASE/api/sessions/$SESSION_ID/templates" \
   -d '{
     "name": "order-confirmation",
     "body": "Hi {{customer}}, your order {{orderId}} has shipped.",
-    "header": "OpenWA Store",
+    "header": "ElementKore-Wa Store",
     "footer": "Reply STOP to unsubscribe."
   }'
 ```
@@ -1045,7 +1045,7 @@ curl -X GET "$BASE/api/sessions/$SESSION_ID/status/6281234567890@c.us" \
 curl -X POST "$BASE/api/sessions/$SESSION_ID/status/send-text" \
   -H "X-API-Key: $API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{ "text": "Hello from OpenWA!", "backgroundColor": "#25D366", "font": 2 }'
+  -d '{ "text": "Hello from ElementKore-Wa!", "backgroundColor": "#0F4EDB", "font": 2 }'
 ```
 
 ```bash

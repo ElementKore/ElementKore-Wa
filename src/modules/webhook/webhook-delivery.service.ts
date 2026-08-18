@@ -370,7 +370,7 @@ export class WebhookDeliveryService implements OnModuleInit, OnModuleDestroy {
       const headers = {
         ...this.sanitizeCustomHeaders(webhook.headers),
         'Content-Type': 'application/json',
-        'User-Agent': 'OpenWA-Webhook/1.0.0',
+        'User-Agent': 'ElementKore-Wa-Webhook/1.0.0',
         'X-OpenWA-Event': event,
         'X-OpenWA-Idempotency-Key': idempotencyKey,
         'X-OpenWA-Delivery-Id': deliveryId,

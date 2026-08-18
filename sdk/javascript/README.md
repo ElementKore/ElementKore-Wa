@@ -1,6 +1,6 @@
 # @rmyndharis/openwa
 
-Official JavaScript/TypeScript SDK for the [OpenWA](https://github.com/rmyndharis/OpenWA) WhatsApp API Gateway.
+Official JavaScript/TypeScript SDK for the [ElementKore-Wa](https://github.com/ElementKore/ElementKore-Wa) WhatsApp API Gateway.
 
 Ships dual CJS + ESM builds with bundled type declarations.
 
@@ -26,7 +26,7 @@ await client.sessions.start('my-session');
 
 const result = await client.messages.sendText('my-session', {
   chatId: '628123456789@c.us',
-  text: 'Hello from the OpenWA SDK!',
+  text: 'Hello from the ElementKore-Wa SDK!',
 });
 console.log(result.messageId);
 ```
@@ -62,7 +62,7 @@ package settings for `@rmyndharis/openwa` and add a Trusted Publisher:
 
 - Provider: **GitHub Actions**
 - Organization: `rmyndharis`
-- Repository: `OpenWA`
+- Repository: `ElementKore-Wa` (source repository URL remains unchanged)
 - Workflow filename: `js-sdk-release.yml` (the extension is part of the value)
 
 There are no repository secrets to add. Until the trusted publisher exists npm

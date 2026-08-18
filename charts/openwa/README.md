@@ -1,6 +1,6 @@
 # openwa
 
-Helm chart for [OpenWA](https://github.com/rmyndharis/OpenWA) — WhatsApp API.
+Helm chart for [ElementKore-Wa](https://github.com/ElementKore/ElementKore-Wa) — WhatsApp API.
 
 > **Single instance only.** A session lease stops two pods from launching the same session,
 > but API-key socket eviction, WS rate-limit buckets and in-flight bulk batches are still

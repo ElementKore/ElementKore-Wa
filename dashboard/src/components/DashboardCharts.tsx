@@ -22,27 +22,27 @@ import './DashboardCharts.css';
 
 const PERIODS: StatsPeriod[] = ['24h', '7d', '30d'];
 
-// Stable, distinct color per message type (recharts needs literal colors). Keyed by type name —
+// Stable, distinct color per message type. Keyed by type name —
 // not array index — so two types can never share a color, and a slice keeps its color even when the
 // set of present types changes between requests. Covers every type mapMessageType() can emit.
 const TYPE_COLORS: Record<string, string> = {
-  text: '#25d366',
-  image: '#3b82f6',
-  contact: '#a855f7',
-  document: '#f59e0b',
-  audio: '#06b6d4',
-  voice: '#ec4899',
-  video: '#14b8a6',
-  sticker: '#ef4444',
-  location: '#84cc16',
-  poll: '#6366f1',
-  revoked: '#f43f5e',
-  masked: '#8b5cf6',
-  unknown: '#64748b',
+  text: 'var(--primary)',
+  image: 'var(--info)',
+  contact: 'var(--accent)',
+  document: 'var(--warning)',
+  audio: 'var(--accent)',
+  voice: 'var(--blue-soft)',
+  video: 'var(--success)',
+  sticker: 'var(--error)',
+  location: 'var(--success)',
+  poll: 'var(--primary-hover)',
+  revoked: 'var(--error)',
+  masked: 'var(--blue-soft)',
+  unknown: 'var(--text-muted)',
 };
 
 // Deterministic fallback for any unmapped type, so its color is stable across renders.
-const FALLBACK_COLORS = ['#0ea5e9', '#d946ef', '#f97316', '#10b981', '#6366f1', '#eab308'];
+const FALLBACK_COLORS = ['var(--info)', 'var(--accent)', 'var(--warning)', 'var(--success)', 'var(--primary-hover)'];
 function colorForType(name: string): string {
   if (TYPE_COLORS[name]) return TYPE_COLORS[name];
   let hash = 0;
@@ -116,12 +116,12 @@ export function DashboardCharts() {
               <AreaChart data={timeSeries} margin={{ top: 8, right: 12, left: -12, bottom: 0 }}>
                 <defs>
                   <linearGradient id="gSent" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#25d366" stopOpacity={0.4} />
-                    <stop offset="95%" stopColor="#25d366" stopOpacity={0} />
+                    <stop offset="5%" stopColor="var(--primary)" stopOpacity={0.4} />
+                    <stop offset="95%" stopColor="var(--primary)" stopOpacity={0} />
                   </linearGradient>
                   <linearGradient id="gReceived" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.4} />
-                    <stop offset="95%" stopColor="#3b82f6" stopOpacity={0} />
+                    <stop offset="5%" stopColor="var(--info)" stopOpacity={0.4} />
+                    <stop offset="95%" stopColor="var(--info)" stopOpacity={0} />
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
@@ -133,7 +133,7 @@ export function DashboardCharts() {
                   type="monotone"
                   dataKey="sent"
                   name={t('dashboard.charts.sent')}
-                  stroke="#25d366"
+                  stroke="var(--primary)"
                   fill="url(#gSent)"
                   strokeWidth={2}
                 />
@@ -141,7 +141,7 @@ export function DashboardCharts() {
                   type="monotone"
                   dataKey="received"
                   name={t('dashboard.charts.received')}
-                  stroke="#3b82f6"
+                  stroke="var(--info)"
                   fill="url(#gReceived)"
                   strokeWidth={2}
                 />
@@ -184,7 +184,7 @@ export function DashboardCharts() {
                     tick={{ fontSize: 12, fill: 'var(--text-secondary)' }}
                   />
                   <Tooltip />
-                  <Bar dataKey="count" name={t('dashboard.charts.messages')} fill="#25d366" radius={[0, 4, 4, 0]} />
+                  <Bar dataKey="count" name={t('dashboard.charts.messages')} fill="var(--primary)" radius={[0, 4, 4, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             )}

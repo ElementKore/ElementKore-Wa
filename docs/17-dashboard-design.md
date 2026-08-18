@@ -2,7 +2,7 @@
 
 ## 17.1 Overview
 
-The dashboard is a web-based management interface for OpenWA that lets users manage sessions, webhooks, and monitor activity without using the API directly.
+The dashboard is a web-based management interface for ElementKore-Wa that lets users manage sessions, webhooks, and monitor activity without using the API directly.
 
 ### Tech Stack
 
@@ -22,7 +22,7 @@ flowchart LR
     end
 
     subgraph Backend
-        API[OpenWA API]
+        API[ElementKore-Wa API]
         WS[socket.io WebSocket]
     end
 
@@ -118,7 +118,7 @@ a non-admin hitting the path falls through to the `*` redirect.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│  🔵 OpenWA                              🔍 Search    👤 Admin    ☀️  │
+│  🔵 ElementKore-Wa                      🔍 Search    👤 Admin    ☀️  │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                      │
 │  ┌─────────────┬─────────────┬─────────────┬─────────────┐          │

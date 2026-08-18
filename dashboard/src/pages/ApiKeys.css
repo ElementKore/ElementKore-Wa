@@ -55,15 +55,15 @@
 }
 
 .api-keys-page .keys-table tbody tr.table-row:hover {
-  background: rgba(37, 211, 102, 0.05);
+  background: color-mix(in srgb, var(--primary) 5%, transparent);
 }
 
 .api-keys-page .keys-table tbody tr.table-row:nth-child(even) {
-  background: rgba(148, 163, 184, 0.08);
+  background: color-mix(in srgb, var(--text-secondary) 8%, transparent);
 }
 
 .api-keys-page .keys-table tbody tr.table-row:nth-child(even):hover {
-  background: rgba(37, 211, 102, 0.05);
+  background: color-mix(in srgb, var(--primary) 5%, transparent);
 }
 
 .api-keys-page .name-cell {
@@ -105,7 +105,7 @@
 .api-keys-page .permission-badge {
   font-size: 0.6875rem;
   padding: 0.25rem 0.5rem;
-  background: rgba(59, 130, 246, 0.12);
+  background: color-mix(in srgb, var(--info) 12%, transparent);
   color: var(--info);
   border-radius: 4px;
   font-weight: 500;
@@ -113,7 +113,7 @@
 }
 
 .api-keys-page .permission-badge:first-child:last-child {
-  background: rgba(37, 211, 102, 0.1);
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
   color: var(--primary);
 }
 
@@ -140,8 +140,8 @@
 }
 
 .api-keys-page .icon-btn.danger:hover {
-  background: rgba(239, 68, 68, 0.12);
-  border-color: rgba(239, 68, 68, 0.3);
+  background: color-mix(in srgb, var(--error) 12%, transparent);
+  border-color: color-mix(in srgb, var(--error) 30%, transparent);
   color: var(--error);
 }
 
@@ -176,7 +176,7 @@
 .api-keys-page .perm-item code {
   font-size: 0.8125rem;
   color: var(--primary);
-  background: rgba(37, 211, 102, 0.1);
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   width: fit-content;
@@ -255,12 +255,12 @@
 }
 
 .api-keys-page .status-badge.active {
-  background: rgba(37, 211, 102, 0.1);
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
   color: var(--primary);
 }
 
 .api-keys-page .status-badge.inactive {
-  background: rgba(239, 68, 68, 0.12);
+  background: color-mix(in srgb, var(--error) 12%, transparent);
   color: var(--error);
 }
 

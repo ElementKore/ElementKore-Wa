@@ -1,6 +1,6 @@
-# OpenWA Go SDK
+# ElementKore-Wa Go SDK
 
-Idiomatic Go client for the [OpenWA](https://github.com/rmyndharis/OpenWA) WhatsApp
+Idiomatic Go client for [ElementKore-Wa](https://github.com/ElementKore/ElementKore-Wa) WhatsApp
 API Gateway. Stdlib-only (no dependencies), context-first, with typed errors and
 an injectable transport pipeline.
 
@@ -35,7 +35,7 @@ func main() {
 
 	res, err := client.Messages.SendText(ctx, "my-session", openwa.SendTextRequest{
 		ChatID: "628123456789@c.us",
-		Text:   "Hello from the OpenWA Go SDK!",
+		Text:   "Hello from the ElementKore-Wa Go SDK!",
 	})
 	if err != nil {
 		log.Fatal(err)

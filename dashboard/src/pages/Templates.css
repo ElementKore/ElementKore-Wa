@@ -386,8 +386,8 @@
 }
 
 .templates-page .icon-btn.danger:hover {
-  border-color: rgba(239, 68, 68, 0.3);
-  background: rgba(239, 68, 68, 0.12);
+  border-color: color-mix(in srgb, var(--error) 30%, transparent);
+  background: color-mix(in srgb, var(--error) 12%, transparent);
   color: var(--error);
 }
 

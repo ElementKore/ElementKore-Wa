@@ -8,10 +8,10 @@ export class SendTextStatusDto {
   @MaxLength(4096)
   text!: string;
 
-  @ApiPropertyOptional({ description: 'Background color (hex).', example: '#25D366' })
+  @ApiPropertyOptional({ description: 'Background color (hex).', example: '#0F4EDB' })
   @IsOptional()
   @IsString()
-  @Matches(/^#[0-9A-Fa-f]{6}$/, { message: 'backgroundColor must be a hex color (e.g., #25D366)' })
+  @Matches(/^#[0-9A-Fa-f]{6}$/, { message: 'backgroundColor must be a hex color (e.g., #0F4EDB)' })
   backgroundColor?: string;
 
   @ApiPropertyOptional({
